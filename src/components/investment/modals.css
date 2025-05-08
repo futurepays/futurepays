@@ -1,0 +1,200 @@
+/* USER WINNER MODAL */
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  padding: 15px;
+  border-radius: 10px;
+  background: #19141b;
+  z-index: 1;
+}
+
+@media screen and (min-width: 744px) {
+  .modal-container {
+    width: 50%;
+  }
+}
+
+/* GLOBAL INCOME MODAL */
+
+.glob-modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #1a142d -4.69%,
+    #461e5a 28.94%,
+    #481f5c 48.93%,
+    #742989 100%
+  );
+  padding: 15px;
+  z-index: 1;
+}
+
+.glob-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glob-head-sec {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.glob-head-sec img {
+  width: 16px;
+}
+
+.flipped {
+  transform: scaleX(-1);
+}
+
+.glob-modal-title {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 78.741% */
+  letter-spacing: 0.96px;
+  margin: 0;
+  text-align: center;
+}
+
+.glob-modal-tagline {
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 236.223% */
+  letter-spacing: 0.32px;
+  margin: 0;
+  text-align: center;
+}
+
+.glob-modal-animation {
+  margin-top: 20px;
+}
+
+.glob-modal-ticket {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.glob-modal-ticket img {
+  width: 60%;
+  height: 25%;
+  margin-top: 10px;
+}
+
+.ticket-top {
+  position: absolute;
+  top: 25%;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  margin: 0;
+  text-align: center;
+}
+
+.ticket-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 60%;
+}
+
+.ticket-bottom p {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  margin: 0;
+  text-align: center;
+}
+
+.ticket-bottom img {
+  margin: 0;
+  width: 16px;
+}
+
+.ticket-dashed {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  border-bottom: 1px dashed #db5400;
+}
+
+.glob-modal-ticket-img {
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(180deg, #f1bc57 0%, #ed7132 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  clip-path: path(
+    "M15.85 0.88C6.73 2.46 4.15 9.13 4 12.26V70.23V71.59C10.72 70.42 24.49 71.37 25.76 84.44C27.04 97.51 12.04 100.36 4.38 100.15C4.25 118.54 4.06 157.9 4.38 168.2C4.69 178.51 13.85 180.88 18.39 180.77C116.28 180.95 314.71 181.18 325.34 180.77C335.97 180.37 339.22 172.01 339.52 167.89C339.88 144.96 340.39 99.31 339.52 100.15C338.42 101.19 316.84 98.72 319.02 84.1C320.77 72.4 333.41 70.75 339.52 71.39C339.81 -5.24 340.23 20.82 339.52 11.79C338.8 2.76 330.72 0.75 326.77 0.88H239.93H110.49C82.74 0.22 24.97 -0.71 15.85 0.88Z"
+  );
+}
+
+@media screen and (min-width: 744px) {
+  .glob-modal-container {
+    width: 50%;
+    height: auto;
+    padding: 25px;
+    border-radius: 14px;
+  }
+  .glob-head-sec img {
+    width: 32px;
+  }
+  .glob-modal-title {
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37.796px; /* 78.741% */
+    letter-spacing: 0.96px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .glob-modal-tagline {
+    font-size: 12px;
+    letter-spacing: 0.32px;
+  }
+  .ticket-top {
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 0.32px;
+  }
+
+  .ticket-bottom {
+    gap: 8px;
+  }
+
+  .ticket-bottom p {
+    font-size: 20px;
+    letter-spacing: 0.32px;
+  }
+
+  .ticket-bottom img {
+    width: 20px;
+  }
+}

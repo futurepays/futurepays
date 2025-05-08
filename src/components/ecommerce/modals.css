@@ -1,0 +1,83 @@
+/* ORDER CONFIRM MODAL */
+
+.order-modal-container {
+  padding: 15px;
+}
+
+.order-modal {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.order-title {
+  color: #00be00;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.712px; /* 45.234% */
+  letter-spacing: 0.96px;
+  margin: 0;
+  text-align: center;
+}
+
+.order-congrats {
+  color: #000;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .order-modal-container {
+    position: relative;
+  }
+  .order-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .order-modal-container {
+    position: relative;
+    /* min-height: 100vh; */
+  }
+  .order-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: 35%;
+    padding: 35px;
+  }
+  .order-title {
+    color: #00be00;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.712px; /* 45.234% */
+    letter-spacing: 0.96px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .order-congrats {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    margin: 0;
+    text-align: center;
+  }
+}

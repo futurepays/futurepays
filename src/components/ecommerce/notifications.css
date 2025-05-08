@@ -1,0 +1,131 @@
+.not-container {
+  padding: 15px;
+}
+
+.not-title {
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37.796px; /* 188.978% */
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.not-sec {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.not-content {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.not-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* or however big you want the container */
+  height: 40px;
+  border: 0.5px solid #b4b4b4;
+  border-radius: 50%;
+}
+
+.not-img-container img {
+  width: 30px;
+}
+
+.not-text {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.653px; /* 172.107% */
+  letter-spacing: 0.24px;
+  margin: 0;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .not-title {
+    font-size: 32px;
+  }
+  .not-sec {
+    margin-top: 55px;
+  }
+  .not-content {
+    gap: 40px;
+  }
+  .not-img-container {
+    width: 70px;
+    height: 70px;
+  }
+  .not-img-container img {
+    width: 55px;
+  }
+  .not-text {
+    font-size: 20px;
+    line-height: 37.796px; /* 188.978% */
+    letter-spacing: 0.4px;
+  }
+}
+
+/* NOTIFICATIONS DESKTOP */
+
+.not-desk-container {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  background: #fff;
+  width: 33%;
+  max-height: 300px;
+  border-radius: 20px;
+  padding: 30px;
+  overflow-x: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.not-desk-head {
+  border-bottom: 3px solid #e6e6e6;
+}
+
+.not-desk-title {
+  color: #222;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 112.5% */
+  margin: 0;
+}
+
+.not-desk-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.not-desk-content {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.not-desk-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85px;
+  height: 55px;
+  border: 0.5px solid #b4b4b4;
+  border-radius: 50%;
+}
+
+.not-desk-img-container img {
+  max-width: 40px;
+}

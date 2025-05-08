@@ -1,0 +1,121 @@
+/* MOBILE MENU */
+
+.mob-menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  background-color: #15081a;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+/* When menu is open */
+.mob-menu-wrapper.open {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.mob-menu-container {
+  background: #15081a;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  height: 100vh;
+}
+
+.mob-menu-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mob-menu-close img {
+  width: 40px;
+}
+
+.mob-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.mob-menu-item {
+  width: 200px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background: #15081a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mob-menu-item.selected {
+  background: linear-gradient(180deg, #5d0edb 0%, #a171e7 100%);
+}
+
+.mob-menu-item img {
+  width: 20px;
+  height: 22px;
+}
+
+.mob-menu-item a {
+  color: #b4b4b4;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 157.482% */
+  letter-spacing: 0.48px;
+  text-decoration: none;
+}
+
+/* INVESTMENT DESKTOP MENU */
+
+.desk-menu-container {
+  width: 280px;
+  /* height: 60vh; */
+  border-radius: 20px;
+  background: #19141b;
+  padding-top: 85px;
+}
+
+.desk-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.desk-menu-item {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 30px;
+  padding: 22px 0 22px 65px;
+  text-decoration: none;
+}
+
+.desk-menu-item img {
+  width: 25px;
+}
+
+.menu-item-name {
+  color: #8d8d8d;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 157.482% */
+  letter-spacing: 0.48px;
+  margin: 0;
+}
+
+.desk-selected {
+  border-radius: 8px;
+  background: linear-gradient(180deg, #5d0edb 0%, #a171e7 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

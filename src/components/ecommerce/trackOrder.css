@@ -1,0 +1,279 @@
+.track-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.track-head-text {
+  color: #222;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37.796px; /* 157.482% */
+  letter-spacing: 0.48px;
+  margin: 0;
+}
+
+.track-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  /* margin-top: 30px; */
+}
+
+.track-order-det {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.track-ship-head {
+  color: #8d8d8d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.track-ship-num {
+  color: #222;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.track-ship-dt {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.track-date,
+.track-time {
+  color: #555;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.track-ship-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.track-status {
+  background: #edebff;
+  color: #2e539a;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  padding: 15px 30px;
+  border-radius: 17px;
+}
+
+.track-ship-stat img {
+  width: 70px;
+}
+
+.track-order-path {
+  padding: 15px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* .track-path-point {
+  display: flex;
+  gap: 15px;
+}
+
+.track-path-point img {
+  width: 20px;
+} */
+
+.track-path {
+  position: relative;
+}
+
+.track-path-point {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  /* margin-bottom: 30px; */
+}
+
+.track-path-point img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* DOTTED LINE CONNECTOR */
+.track-path-point:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 20px; /* start from bottom of icon */
+  left: 10px; /* align with center of icon (adjust if needed) */
+  height: calc(100% + 0px); /* stretch to next icon */
+  border-left: 0.7px dashed #e2e2e2;
+  z-index: 0;
+}
+
+.track-add-head {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27.909px; /* 174.431% */
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.track-add-main {
+  color: #b4b4b4;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  margin: 15px 0 0 0;
+}
+
+.track-add-num {
+  color: #222;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.909px; /* 232.575% */
+  letter-spacing: 0.24px;
+  margin: 10px 0 0 0;
+}
+
+.track-pack {
+  width: 85px;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  margin: 13px 0 60px 0;
+  padding: 12px 17px;
+  border-radius: 10px;
+}
+
+.track-map img {
+  width: 100%;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .track-container {
+    padding: 25px;
+  }
+
+  .track-ship-head {
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
+
+  .track-ship-num {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  .track-ship-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .track-date,
+  .track-time {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+  }
+
+  .track-ship-stat {
+    margin: 0;
+    gap: 50px;
+  }
+
+  .track-status {
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    padding: 22.5px 30px;
+  }
+
+  .track-add-head {
+    font-size: 24px;
+    line-height: 37.796px; /* 157.482% */
+    letter-spacing: 0.48px;
+  }
+
+  .track-add-main {
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
+
+  .track-add-num {
+    font-size: 16px;
+    line-height: 37.796px; /* 236.223% */
+    letter-spacing: 0.32px;
+  }
+
+  .track-pack {
+    width: 110px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .track-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  .track-desk-det {
+    width: 80%;
+  }
+  .track-ship-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .track-ship-dt {
+    gap: 10px;
+  }
+  .track-ship-stat {
+    margin: 0;
+    gap: 25px;
+  }
+  .track-map img {
+    /* width: 40%; */
+  }
+}

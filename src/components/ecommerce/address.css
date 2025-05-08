@@ -1,0 +1,244 @@
+/* ADD ADDRESS */
+
+.add-container {
+  padding: 15px;
+}
+
+.add-title {
+  color: #222;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 37.796px; /* 157.482% */
+  letter-spacing: 0.48px;
+}
+
+.add-form form,
+.res-input-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-input-item input {
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 37.796px; /* 188.978% */
+  letter-spacing: 0.4px;
+}
+.add-input-item input,
+.add-input-item select {
+  color: #b4b4b4;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 236.223% */
+  letter-spacing: 0.32px;
+  padding: 20px;
+  border: 1px solid #8d8d8d;
+  border-radius: 8px;
+}
+
+.add-input-item select {
+  /* Remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("../assets/form-select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+.add-type {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 157.482% */
+  letter-spacing: 0.48px;
+  margin: 50px 0 0 0;
+}
+
+.address-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.address-type-option {
+  display: flex;
+  gap: 10px;
+}
+
+.address-type-option input[type="radio"] {
+  accent-color: #222;
+  transform: scale(2);
+  cursor: pointer;
+}
+
+.warn-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-radius: 10px;
+  background: #febebe;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.warn-text {
+  color: #555;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.confirm-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-radius: 7.047px;
+  background: #155bc3;
+  padding: 15px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.pay-btn {
+  color: #fff;
+  font-size: 22.183px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13.31px; /* 60% */
+  letter-spacing: 0.444px;
+  margin: 0;
+}
+
+.confirm-btn img {
+  width: 12px;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .confirm-btn {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .add-input-item {
+    width: 29%;
+  }
+  .res-input-sec {
+    flex-direction: row;
+    gap: 30px;
+    width: 60%;
+  }
+  .res-input-sec .add-input-item {
+    width: 50%;
+  }
+  .warn-container {
+    width: 40%;
+  }
+  .confirm-btn {
+    width: 25%;
+  }
+}
+
+/* ADDRESS TYPE */
+
+.add-type-container {
+  padding: 15px;
+}
+
+.add-type-card-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.add-type-input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-type-name {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.796px; /* 188.978% */
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.add-type-card {
+  display: flex;
+  gap: 10px;
+}
+
+.add-type-card-label {
+  color: #222;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px; /* 207.143% */
+  letter-spacing: 0.28px;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.add-type-card-label input[type="radio"] {
+  transform: scale(2.5);
+}
+
+.add-type-add {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+  width: 125px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .add-type-name {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+  }
+  .add-type-card-label {
+    font-size: 24px;
+    line-height: 37.796px; /* 157.482% */
+    letter-spacing: 0.4px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .add-type-card-label {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    padding: 40px;
+  }
+  .add-type-input-item {
+    width: 70%;
+  }
+}
