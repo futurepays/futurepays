@@ -87,6 +87,8 @@ body {
 
 .google,
 .facebook {
+  display: flex;
+  justify-content: center;
   width: 100%;
   border-radius: 27px;
   padding: 20px 0;
@@ -96,6 +98,7 @@ body {
 }
 
 .facebook {
+  cursor: pointer;
   background: #0066ff;
   color: #fff;
 }
