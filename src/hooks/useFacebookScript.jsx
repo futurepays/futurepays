@@ -4,7 +4,7 @@ const useFacebookScript = () => {
   useEffect(() => {
     window.fbAsyncInit = function () {
       window.FB.init({
-        appId: "1015607187330513", // Replace with your App ID
+        appId: `${import.meta.env.FACEBOOK_APP_ID}`,
         cookie: true,
         xfbml: false,
         version: "v12.0",

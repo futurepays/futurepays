@@ -68,7 +68,7 @@ const HomePage = () => {
   const initializeGoogleSignIn = useCallback(() => {
     if (window.google?.accounts?.id) {
       window.google.accounts.id.initialize({
-        client_id: "685525595342-cgbm11uoa5scga8evce3d14pu2kg44bu.apps.googleusercontent.com",
+        client_id: `${import.meta.env.GOOGLE_CLIENT_ID}`,
         callback: handleGoogleResponse,
       });
       
