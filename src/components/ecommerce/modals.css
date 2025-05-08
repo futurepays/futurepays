@@ -1,10 +1,15 @@
 /* ORDER CONFIRM MODAL */
 
 .order-modal-container {
+  /* position: relative; */
   padding: 15px;
 }
 
 .order-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
   padding: 15px;
   border: 1px solid #000;
@@ -35,27 +40,27 @@
 
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .order-modal-container {
-    position: relative;
+    /* position: relative; */
   }
   .order-modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
     width: 40%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .order-modal-container {
-    position: relative;
+    /* position: relative; */
     /* min-height: 100vh; */
   }
   .order-modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
     width: 35%;
     padding: 35px;
   }
