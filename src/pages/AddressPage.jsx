@@ -5,7 +5,7 @@ import AddressType from "../components/ecommerce/AddressType";
 import Footer from "../components/ecommerce/Footer";
 
 const AddressPage = () => {
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
     <>
