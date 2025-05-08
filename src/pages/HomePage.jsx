@@ -88,27 +88,26 @@ const HomePage = () => {
   useGoogleScript(initializeGoogleSignIn);
   
   const handleFacebookClick = () => {
-    if (window.FB) {
+    if (window.FB && window.FB.isReady) { // ✅ Use the flag here
       window.FB.login((response) => {
-        // Wrap the async logic inside a normal function
         const handleLoginResponse = async () => {
           if (response.authResponse) {
             const accessToken = response.authResponse.accessToken;
-            
+  
             const endpoint =
-            activeTab === 'signup'
-            ? `${import.meta.env.VITE_BASE_URL}/authentication/facebook-signup/`
-            : `${import.meta.env.VITE_BASE_URL}/authentication/facebook-login/`;
-            
+              activeTab === 'signup'
+                ? `${import.meta.env.VITE_BASE_URL}/authentication/facebook-signup/`
+                : `${import.meta.env.VITE_BASE_URL}/authentication/facebook-login/`;
+  
             try {
               const res = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ access_token: accessToken }),
               });
-              
+  
               const data = await res.json();
-              
+  
               if (!res.ok) {
                 if (
                   activeTab === 'signup' &&
@@ -117,21 +116,21 @@ const HomePage = () => {
                   alert('User already exists. Please log in instead.');
                   return;
                 }
-                
+  
                 alert(`An error occurred: ${data?.error || 'Unknown error'}`);
                 return;
               }
-              
+  
               const { access, refresh } = data;
               sessionStorage.setItem('accessToken', access);
               sessionStorage.setItem('refreshToken', refresh);
-              
+  
               alert(
                 activeTab === 'signup'
-                ? 'Sign Up successful via Facebook!'
-                : 'Login successful via Facebook!'
+                  ? 'Sign Up successful via Facebook!'
+                  : 'Login successful via Facebook!'
               );
-              
+  
               navigate('/explore');
             } catch (err) {
               console.error('Facebook auth error:', err);
@@ -141,13 +140,14 @@ const HomePage = () => {
             console.log('Facebook login cancelled or not authorized.');
           }
         };
-        
-        handleLoginResponse(); // Call the async function here
+  
+        handleLoginResponse();
       }, { scope: 'email' });
     } else {
-      console.error('Facebook SDK not loaded yet.');
+      alert('Facebook SDK is still loading. Please wait a moment.');
     }
-  };  
+  };
+    
   
   useFacebookScript();
   
