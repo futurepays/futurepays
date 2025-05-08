@@ -1,10 +1,10 @@
 import React from "react";
 import FooterLogo from "../../assets/logo.svg"
 import FooterLogoText from "../../assets/footer-logo-text.png"
-import Instagram from "../../assets/instagram.png"
-import Facebook from "../../assets/facebook.png"
-import Youtube from "../../assets/youtube.png"
-import LinkedIn from "../../assets/linkedin.png"
+import Instagram from "../../assets/instagram.svg"
+import Facebook from "../../assets/facebook.svg"
+import Youtube from "../../assets/youtube.svg"
+import LinkedIn from "../../assets/linkedin.svg"
 
 const Footer = () => {
   return (
