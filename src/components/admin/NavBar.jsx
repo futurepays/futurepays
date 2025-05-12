@@ -5,7 +5,7 @@ import AdminNotify from "../../assets/admin-notifications.svg"
 import ProfImg from "../../assets/admin-profile.png"
 import ProfileDropdown from "../../assets/admin-prof-dropdown.svg"
 
-const NavBar = () => {
+const NavBar = ({ onNotificationClick }) => {
   return (
     <>
         <div className="adm-nav-container">
@@ -14,7 +14,7 @@ const NavBar = () => {
                     <img src={AdminLogo} alt="Future Pays Logo" />
                 </div>
                 <div className="adm-nav-opt">
-                    <div className="adm-nav-not">
+                    <div className="adm-nav-not" onClick={onNotificationClick}>
                         <img src={AdminNotify} alt="Notify" />
                     </div>
                     <div className="adm-nav-prof">

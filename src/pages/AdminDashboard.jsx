@@ -6,6 +6,8 @@ import DashFinances from "../components/admin/DashFinances";
 import DashSales from "../components/admin/DashSales";
 import DashLeaderBoard from "../components/admin/DashLeaderBoard";
 import DashUsers from "../components/admin/DashUsers";
+import Notifications from "../components/admin/Notifications";
+import Expenses from "../components/admin/Expenses";
 
 const AdminDashboard = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState("Dashboard");
@@ -16,12 +18,13 @@ const AdminDashboard = () => {
     "Order Lists": "Order List",
     CMS: "Content Management System",
     Expense: "Expenses",
+    Notifications: "Notifications",
     // Logout: "Logout"
   };
 
   return (
     <>
-      <NavBar />
+      <NavBar onNotificationClick={() => setSelectedMenuItem("Notifications")} />
       <div className="adm-dash-layout">
         <div className="adm-dash-menu">
           <Menu selected={selectedMenuItem} onSelect={setSelectedMenuItem} />
@@ -31,10 +34,26 @@ const AdminDashboard = () => {
             <p className="dash-sec-title">{sectionTitles[selectedMenuItem]}</p>
           </div>
           <div style={{display: "flex", flexDirection: "column", gap: "35px"}}>
-              <DashFinances />
-              <DashSales />
-              <DashLeaderBoard />
-              <DashUsers />
+              {selectedMenuItem === "Dashboard" &&
+                <div>
+                  <DashFinances />
+                  <DashSales />
+                  <DashLeaderBoard />
+                </div>
+              }
+              {selectedMenuItem === "Users" &&
+                <div>
+                  <DashUsers />
+                </div>
+              }
+              { selectedMenuItem === "Expense" &&
+                <div>
+                  <Expenses />
+                </div>
+              }
+              {selectedMenuItem  === "Notifications" && 
+                <Notifications />
+              }
           </div>
         </div>
       </div>
