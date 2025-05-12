@@ -107,6 +107,7 @@ const HomePage = () => {
               });
   
               const data = await res.json();
+              console.log('Backend response:', data.token);
   
               if (!res.ok) {
                 if (
@@ -121,7 +122,7 @@ const HomePage = () => {
                 return;
               }
   
-              const { access, refresh } = data;
+              const { access, refresh } = data.token;
               sessionStorage.setItem('accessToken', access);
               sessionStorage.setItem('refreshToken', refresh);
   
