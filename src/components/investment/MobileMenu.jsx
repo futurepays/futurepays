@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../ecommerce/menu.css"
 import { Link } from "react-router";
 import CloseMenu from "../../assets/close-menu.svg" 
@@ -6,11 +6,17 @@ import UserProfile from "../../assets/user-menu.svg"
 import Global from "../../assets/global-menu.svg" 
 import Rewards from "../../assets/rewards-menu.svg" 
 
-const MobileMenu = ({ isOpen, closeMenu }) => {
-    const [selected, setSelected] = useState("User Profile");
+const menuItems = [
+  { name: "User Profile", icon: UserProfile },
+  { name: "Global", icon: Global },
+  { name: "Rewards", icon: Rewards },
+];
 
-  const handleSelect = (label) => {
-    setSelected(label);
+const MobileMenu = ({ isOpen, closeMenu, selected, setSelected }) => {
+
+  const handleSelect = (name) => {
+    setSelected(name);
+    closeMenu(); 
   };
   return (
     <>
@@ -20,18 +26,14 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
                     <img src={CloseMenu} alt="Close" onClick={closeMenu} />
                 </div>
                 <div className="mob-menu-content">
-                {[
-              { label: "User Profile", icon: UserProfile, path: "" },
-              { label: "Global", icon: Global, path: "" },
-              { label: "Rewards", icon: Rewards, path: "" },
-            ].map((item) => (
+                {menuItems.map((item) => (
               <div
-                key={item.label}
-                className={`mob-menu-item ${selected === item.label ? "selected" : ""}`}
-                onClick={() => handleSelect(item.label)}
+                key={item.name}
+                className={`mob-menu-item ${selected === item.name ? "selected" : ""}`}
+                onClick={() => handleSelect(item.name)}
               >
                 <img src={item.icon} alt={item.label} />
-                <Link to={item.path}>{item.label}</Link>
+                <Link>{item.name}</Link>
               </div>
             ))}
                 </div>

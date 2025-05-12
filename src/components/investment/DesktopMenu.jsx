@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import UserProfile from "../../assets/user-menu.svg";
 import Global from "../../assets/global-menu.svg";
 import Rewards from "../../assets/rewards-menu.svg";
 import { Link } from "react-router-dom"; // Corrected import
 
 const menuItems = [
-  { name: "User Profile", icon: UserProfile, path: "/userProfile" },
-  { name: "Global", icon: Global, path: "/global" },
-  { name: "Rewards", icon: Rewards, path: "/rewards" },
+  { name: "User Profile", icon: UserProfile},
+  { name: "Global", icon: Global},
+  { name: "Rewards", icon: Rewards},
 ];
 
-const DesktopMenu = () => {
-  const [selected, setSelected] = useState("User Profile");
+const DesktopMenu = ({ selected, setSelected }) => {
 
   return (
     <div className="desk-menu-container">

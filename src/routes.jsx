@@ -4,8 +4,7 @@ import HomePage from "./pages/HomePage";
 import ExplorePage from "./pages/ExplorePage";
 import ProductPage from "./pages/ProductPage";
 import NotificationsPage from "./pages/NotificationsPage";
-import UserProfile from "./pages/UserProfile";
-import Global from "./pages/Global";
+import WealthProfile from "./pages/WealthProfile";
 import AdminDashboard from "./pages/AdminDashboard";
 import AddressPage from "./pages/AddressPage";
 import ProtectedRoute from "./ProtectedRoute";
@@ -24,8 +23,7 @@ const router = createBrowserRouter([
           { path: "/product/:id", element: <ProductPage /> },
           { path: "/addAddress", element: <AddressPage /> },
           { path: "/notifications", element: <NotificationsPage /> },
-          { path: "/userProfile", element: <UserProfile /> },
-          { path: "/global", element: <Global /> },
+          { path: "/wealthProfile", element: <WealthProfile /> },
           { path: "/admin", element: <AdminDashboard /> },
         ],
       },
