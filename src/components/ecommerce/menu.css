@@ -75,20 +75,28 @@
   text-decoration: none;
 }
 
+.mob-menu-item.selected img {
+  filter: brightness(0) invert(1);
+}
+
+.mob-menu-item.selected a {
+  color: #f5f5f5;
+}
+
 /* INVESTMENT DESKTOP MENU */
 
 .desk-menu-container {
   width: 280px;
-  /* height: 60vh; */
+  height: 100%;
   border-radius: 20px;
   background: #19141b;
-  padding-top: 85px;
 }
 
 .desk-menu-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-top: 85px;
 }
 
 .desk-menu-item {
@@ -118,4 +126,12 @@
   border-radius: 8px;
   background: linear-gradient(180deg, #5d0edb 0%, #a171e7 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.desk-selected img {
+  filter: brightness(0) invert(1);
+}
+
+.desk-selected .menu-item-name {
+  color: #f5f5f5;
 }

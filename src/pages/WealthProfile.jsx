@@ -7,6 +7,7 @@ import NavBar from "../components/investment/NavBar";
 import EditProfile from "../components/investment/EditProfile";
 import GlobalTables from "../components/investment/GlobalTables";
 import MobileMenu from "../components/investment/MobileMenu";
+import Rewards from "../components/investment/Rewards";
 
 const WealthProfile = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -51,7 +52,7 @@ const WealthProfile = () => {
                     </>
                   )}
                   {selectedMenu === "Global" && <GlobalTables />}
-                  {selectedMenu === "Rewards" && <div style={{color: "#FFF", textAlign: "center"}}>🎁 Rewards section is currently under development, STAY TUNED!</div>}
+                  {selectedMenu === "Rewards" && <Rewards />}
                 </>
               )}
             </div>
