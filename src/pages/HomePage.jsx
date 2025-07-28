@@ -203,11 +203,11 @@ const HomePage = () => {
         <div className="sign-footer">
           <p className="sign-terms">
             By continuing, you agree to Future Pays{' '}
-            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none' }}>
+            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none', cursor: 'pointer' }}>
               Terms of service
             </a>{' '}
             and{' '}
-            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none' }}>
+            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none', cursor: 'pointer' }}>
               Privacy Policy
             </a>
             .
