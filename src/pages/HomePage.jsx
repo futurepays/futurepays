@@ -5,9 +5,11 @@ import LoginApparel from '../assets/login-apparel.png';
 import { useNavigate } from 'react-router';
 import useGoogleScript from '../hooks/useGoogleScript';
 import useFacebookScript from '../hooks/useFacebookScript';
+import PrivacyPolicy from '../components/ecommerce/PrivacyPolicy';
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState('signup');
+  const [openPolicy, setOpenPolicy] = useState(false);
   const navigate = useNavigate();
 
   
@@ -159,9 +161,14 @@ const HomePage = () => {
         //     console.error('Google Identity Services not initialized.');
         //   }
         // };
+
+  const openPolicyTab = () => {
+    setOpenPolicy(true)
+  }
         
         return (
     <div className="sign-desk-container">
+      {openPolicy && <PrivacyPolicy onClose={() => setOpenPolicy(false)} />}
       <div className="sign-container">
         <div className="nav-logo">
           <img src={Logo} alt="Future Pays Logo" />
@@ -196,11 +203,11 @@ const HomePage = () => {
         <div className="sign-footer">
           <p className="sign-terms">
             By continuing, you agree to Future Pays{' '}
-            <a href="" style={{ color: '#000', textDecoration: 'none' }}>
+            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none' }}>
               Terms of service
             </a>{' '}
             and{' '}
-            <a href="" style={{ color: '#000', textDecoration: 'none' }}>
+            <a onClick={openPolicyTab} style={{ color: '#000', textDecoration: 'none' }}>
               Privacy Policy
             </a>
             .
